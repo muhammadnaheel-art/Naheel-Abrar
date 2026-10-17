@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Perfumer's Supply & Manufacturing Codex | Pakistan Edition</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        lemon: {
+                            50: '#f7fee7',
+                            100: '#ecfccb',
+                            200: '#d9f99d',
+                            300: '#bef264',
+                            400: '#a3e635',
+                            500: '#84cc16',
+                            600: '#65a30d',
+                            700: '#4d7c0f',
+                            800: '#3f6212',
+                            900: '#365314',
+                            950: '#142203',
+                        },
+                        neonOrange: {
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            glow: '#ff6200'
+                        },
+                        shockPink: {
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            glow: '#ff007f'
+                        },
+                        shockPurple: {
+                            400: '#c084fc',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            900: '#3b0764'
+                        },
+                        cyberCyan: {
+                            300: '#67e8f9',
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                            900: '#164e63'
+                        },
+                        brandDark: {
+                            900: '#0c0f0a',
+                            850: '#111710',
+                            800: '#171f15'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0b0f0b;
+            color: #e2e8f0;
+            -webkit-font-smoothing: antialiased;
+        }
+        ::selection {
+            background-color: #bef264;
+            color: #0b0f0b;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111710;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #84cc16;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a3e635;
+        }
+        .glow-lemon {
+            box-shadow: 0 0 25px -4px rgba(163, 230, 53, 0.25);
+        }
+        .glow-pink {
+            box-shadow: 0 0 25px -4px rgba(236, 72, 153, 0.25);
+        }
+        .glow-cyan {
+            box-shadow: 0 0 25px -4px rgba(6, 182, 212, 0.25);
+        }
+        .glow-orange {
+            box-shadow: 0 0 25px -4px rgba(249, 115, 22, 0.25);
+        }
+        .glow-purple {
+            box-shadow: 0 0 25px -4px rgba(168, 85, 247, 0.25);
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; color: black; }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-brandDark-900 text-slate-200 min-h-screen selection:bg-lemon-400 selection:text-black">
+
+    <!-- Sticky Top Banner -->
+    <header class="sticky top-0 z-50 bg-brandDark-850/90 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-lemon-500 via-cyberCyan-400 to-shockPink-500 p-[1.5px] shadow-lg shadow-lemon-500/20">
+                    <div class="w-full h-full bg-brandDark-900 rounded-[10px] flex items-center justify-center">
+                        <span class="text-lemon-400 font-extrabold text-lg">Ψ</span>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-sm font-black tracking-wider text-white uppercase flex items-center gap-2">
+                        Perfumer Supply Codex
+                        <span class="text-[10px] font-mono font-bold bg-lemon-400/10 text-lemon-400 px-2 py-0.5 rounded-full border border-lemon-400/30">2026 RATES</span>
+                    </h1>
+                    <p class="text-[11px] text-slate-400 tracking-wide font-mono flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-cyberCyan-400 animate-ping"></span>
+                        Karachi & Pakistan Atelier Supply Blueprint
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-3">
+                <div class="hidden md:flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono">
+                    <span class="w-2 h-2 rounded-full bg-lemon-400 shadow-[0_0_8px_#a3e635]"></span>
+                    <span class="text-slate-300">Live Karachi Spot Rates (PKR)</span>
+                </div>
+                <button onclick="window.print()" class="no-print inline-flex items-center px-3.5 py-1.5 text-xs font-bold rounded-xl text-slate-200 bg-white/5 hover:bg-white/10 border border-white/10 transition-all hover:border-lemon-400/50">
+                    <svg class="w-3.5 h-3.5 mr-1.5 text-lemon-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                    Print / PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+        
+        <!-- Hero Section with Color Accents -->
+        <section class="relative rounded-3xl bg-gradient-to-b from-brandDark-850 to-brandDark-900 border border-white/10 p-6 sm:p-10 overflow-hidden shadow-2xl">
+            <!-- Neon ambient glows -->
+            <div class="absolute -right-20 -top-20 w-96 h-96 bg-lemon-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-shockPink-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute left-1/3 -top-10 w-72 h-72 bg-cyberCyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 max-w-4xl space-y-4">
+                <div class="inline-flex flex-wrap items-center gap-2 text-xs font-mono uppercase tracking-widest">
+                    <span class="bg-lemon-400/10 text-lemon-400 border border-lemon-400/30 px-3 py-1 rounded-full font-bold">100% Supply Focused</span>
+                    <span class="bg-cyberCyan-400/10 text-cyberCyan-300 border border-cyberCyan-400/30 px-3 py-1 rounded-full font-bold">Zero Fluff</span>
+                    <span class="bg-shockPink-500/10 text-shockPink-400 border border-shockPink-500/30 px-3 py-1 rounded-full font-bold">Karachi Wholesale Rates</span>
+                </div>
+                
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                    The Complete Fragrance <span class="text-transparent bg-clip-text bg-gradient-to-r from-lemon-400 via-cyberCyan-400 to-shockPink-500">Supply & Manufacturing</span> Architecture
+                </h2>
+                
+                <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-3xl">
+                    Marketing gets you the first click. <strong>Flawless supply-side engineering</strong> keeps customers from asking for a refund. Here is your definitive, plain-English handbook covering real wholesale prices in Karachi, how to spot watered-down oils, prevent bottle leaks, filter properly, and survive local couriers.
+                </p>
+
+                <!-- High-Impact Core Metric Cards -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3">
+                    <div class="p-4 rounded-2xl bg-white/[0.03] border border-lemon-400/20 hover:border-lemon-400/60 transition-all glow-lemon">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-mono font-bold text-lemon-400">CRIMP NECK</span>
+                            <span class="w-2 h-2 rounded-full bg-lemon-400"></span>
+                        </div>
+                        <span class="block text-xl sm:text-2xl font-black text-white font-mono mt-1">FEA 15</span>
+                        <span class="text-[11px] text-slate-400">No leaks in courier vans</span>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white/[0.03] border border-cyberCyan-400/20 hover:border-cyberCyan-400/60 transition-all glow-cyan">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-mono font-bold text-cyberCyan-300">FREEZE POINT</span>
+                            <span class="w-2 h-2 rounded-full bg-cyberCyan-400"></span>
+                        </div>
+                        <span class="block text-xl sm:text-2xl font-black text-white font-mono mt-1">0°C to 4°C</span>
+                        <span class="text-[11px] text-slate-400">Stops winter sediment</span>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white/[0.03] border border-shockPurple-400/20 hover:border-shockPurple-400/60 transition-all glow-purple">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-mono font-bold text-shockPurple-400">PURE ETHANOL</span>
+                            <span class="w-2 h-2 rounded-full bg-shockPurple-400"></span>
+                        </div>
+                        <span class="block text-xl sm:text-2xl font-black text-white font-mono mt-1">ENA 96.4%</span>
+                        <span class="text-[11px] text-slate-400">Smooth, zero-burn skin feel</span>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white/[0.03] border border-shockPink-500/20 hover:border-shockPink-500/60 transition-all glow-pink">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-mono font-bold text-shockPink-400">BOX BOARD</span>
+                            <span class="w-2 h-2 rounded-full bg-shockPink-400"></span>
+                        </div>
+                        <span class="block text-xl sm:text-2xl font-black text-white font-mono mt-1">1200+ GSM</span>
+                        <span class="text-[11px] text-slate-400">Rigid unboxing strength</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Navigator Bar -->
+        <nav class="sticky top-16 z-40 bg-brandDark-850/95 backdrop-blur-md p-1.5 rounded-2xl border border-white/10 flex items-center space-x-1.5 overflow-x-auto text-xs font-semibold scrollbar-none no-print shadow-xl">
+            <a href="#module-oil" class="px-3.5 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all border border-transparent hover:border-lemon-400/30 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-lemon-400"></span> 1. Oils & Anti-Adulteration
+            </a>
+            <a href="#module-solvent" class="px-3.5 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all border border-transparent hover:border-shockPurple-400/30 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-shockPurple-400"></span> 2. Alcohol & Additives
+            </a>
+            <a href="#module-filtration" class="px-3.5 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all border border-transparent hover:border-cyberCyan-400/30 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-cyberCyan-400"></span> 3. Chill-Filter SOP
+            </a>
+            <a href="#module-crimp" class="px-3.5 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all border border-transparent hover:border-neonOrange-500/30 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-neonOrange-500"></span> 4. Crimp Engineering
+            </a>
+            <a href="#module-packaging" class="px-3.5 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all border border-transparent hover:border-shockPink-500/30 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-shockPink-500"></span> 5. Boxes & Couriers
+            </a>
+            <a href="#module-karachi" class="px-3.5 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all border border-transparent hover:border-lemon-400/30 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-lemon-400"></span> 6. Karachi Sourcing Map
+            </a>
+            <a href="#module-tips" class="px-3.5 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all border border-transparent hover:border-neonOrange-500/30 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-neonOrange-500"></span> 7. Five Insider Rules
+            </a>
+            <a href="#module-calculator" class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-lemon-500 to-cyberCyan-500 text-black font-extrabold hover:opacity-90 whitespace-nowrap transition-all shadow-md">
+                Interactive Cost & Batch Tool
+            </a>
+        </nav>
+
+        <!-- Module 1: Pre-Blended Oils & Anti-Adulteration Defense -->
+        <section id="module-oil" class="space-y-6 pt-4">
+            <div class="flex items-center justify-between border-b border-lemon-400/30 pb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-xl bg-lemon-400 text-black flex items-center justify-center font-mono font-black text-sm shadow-md shadow-lemon-400/20">01</span>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Pre-Blended Oils: Sourcing & Anti-Adulteration Defense</h3>
+                        <p class="text-xs font-mono text-lemon-400 uppercase">Luzi, Iberchem, Seluz & Real Wholesale Spot Prices</p>
+                    </div>
+                </div>
+                <span class="text-xs font-mono text-slate-400 bg-white/5 px-2.5 py-1 rounded-lg border border-white/10">Bolton Market • Marriot Road</span>
+            </div>
+
+            <!-- Price & Supplier Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Luzi -->
+                <div class="bg-brandDark-850 p-5 rounded-2xl border border-lemon-400/30 space-y-3 relative overflow-hidden group hover:border-lemon-400 transition-all glow-lemon">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-lemon-400/20 text-lemon-300">SWITZERLAND</span>
+                        <span class="text-xs font-bold text-white font-mono bg-white/10 px-2 py-0.5 rounded">₨ 22,000 - 36,000 / kg</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Luzi AG Oils</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        The gold standard in Pakistan. Heavy base notes, very smooth top notes, almost zero synthetic screech.
+                    </p>
+                    <div class="text-[11px] font-mono text-lemon-300 bg-lemon-950/60 p-2.5 rounded-xl border border-lemon-500/20">
+                        <strong>Practical Tip:</strong> Requires 4-5 weeks of resting (maceration) because the heavy resins take longer to blend smoothly with alcohol.
+                    </div>
+                </div>
+
+                <!-- Iberchem -->
+                <div class="bg-brandDark-850 p-5 rounded-2xl border border-cyberCyan-400/30 space-y-3 relative overflow-hidden group hover:border-cyberCyan-400 transition-all glow-cyan">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-cyberCyan-400/20 text-cyberCyan-300">SPAIN</span>
+                        <span class="text-xs font-bold text-white font-mono bg-white/10 px-2 py-0.5 rounded">₨ 15,000 - 24,000 / kg</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Iberchem Oils</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        King of aquatic, citrus, and fresh summer scents. Huge initial projection and crowd-pleasing opening.
+                    </p>
+                    <div class="text-[11px] font-mono text-cyberCyan-300 bg-cyberCyan-900/40 p-2.5 rounded-xl border border-cyberCyan-500/20">
+                        <strong>Practical Tip:</strong> Sensitive to Karachi heat. Always add 0.05% BHT antioxidant or the fresh citrus notes will spoil after 4 months.
+                    </div>
+                </div>
+
+                <!-- Seluz -->
+                <div class="bg-brandDark-850 p-5 rounded-2xl border border-shockPurple-400/30 space-y-3 relative overflow-hidden group hover:border-shockPurple-400 transition-all glow-purple">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-shockPurple-400/20 text-shockPurple-300">TURKEY</span>
+                        <span class="text-xs font-bold text-white font-mono bg-white/10 px-2 py-0.5 rounded">₨ 16,000 - 27,000 / kg</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Seluz Oils</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Specialized in beast-mode longevity, ouds, ambers, sweet leathers, and rich Arabian-Western blends.
+                    </p>
+                    <div class="text-[11px] font-mono text-shockPurple-300 bg-shockPurple-900/40 p-2.5 rounded-xl border border-shockPurple-500/20">
+                        <strong>Practical Tip:</strong> Higher natural wax content. Must be chill-filtered; otherwise, tiny cloud particles form in cold weather.
+                    </div>
+                </div>
+
+                <!-- French Houses (Mane / Expressions) -->
+                <div class="bg-brandDark-850 p-5 rounded-2xl border border-shockPink-400/30 space-y-3 relative overflow-hidden group hover:border-shockPink-400 transition-all glow-pink">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-shockPink-400/20 text-shockPink-300">FRANCE</span>
+                        <span class="text-xs font-bold text-white font-mono bg-white/10 px-2 py-0.5 rounded">₨ 24,000 - 42,000 / kg</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Mane & French Houses</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Top-tier luxury profiles with true niche character. Subtle, complex, and beloved by perfume connoisseurs.
+                    </p>
+                    <div class="text-[11px] font-mono text-shockPink-300 bg-shockPink-900/40 p-2.5 rounded-xl border border-shockPink-500/20">
+                        <strong>Practical Tip:</strong> More delicate natural materials. Requires high-purity ethanol (minimum 96.4% ENA) to avoid clouding.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Adulteration Warning & The 3 Quick Purity Tests -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- The Bolton Market Dilution Alert -->
+                <div class="lg:col-span-5 bg-brandDark-850 p-6 rounded-2xl border border-shockPink-500/40 space-y-3 glow-pink">
+                    <div class="flex items-center space-x-2 text-shockPink-400 font-mono text-xs uppercase font-bold">
+                        <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        <span>The "Bolton Market Cut" Scam (How You Get Cheated)</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white">Why You Should NEVER Buy Open/Decanted Oil Liters</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Unscrupulous vendors buy an original 25kg canister of Luzi or Iberchem, open it, and mix in <strong>15% to 35% odorless cutting fluids</strong> that cost only ₨ 1,200 - ₨ 2,500/kg. They sell it to you at the full price of ₨ 28,000/kg.
+                    </p>
+                    <div class="space-y-2 text-xs font-mono">
+                        <div class="p-2.5 bg-shockPink-500/10 text-shockPink-300 rounded-xl border border-shockPink-500/20">
+                            <strong>1. DPG (Dipropylene Glycol) [₨ 1,200/kg]:</strong> Makes oil thicker, suffocates scent projection, and leaves an oily stain on customer clothes.
+                        </div>
+                        <div class="p-2.5 bg-neonOrange-500/10 text-neonOrange-400 rounded-xl border border-neonOrange-500/20">
+                            <strong>2. Light Mineral Oil / White Oil [₨ 800/kg]:</strong> Pure disaster. It will never dissolve completely in alcohol, causing a greasy floating layer that ruins your entire batch.
+                        </div>
+                    </div>
+                    <div class="p-3 bg-lemon-400/10 border border-lemon-400/40 rounded-xl text-xs text-lemon-300 font-semibold">
+                        Golden Rule: Only accept factory-sealed aluminum cans (1kg, 5kg, or 25kg) with intact security shrink wrap and batch number. Never buy loose oil in plastic bottles!
+                    </div>
+                </div>
+
+                <!-- 3 Instant Practical Lab Tests -->
+                <div class="lg:col-span-7 bg-brandDark-850 p-6 rounded-2xl border border-white/10 space-y-4">
+                    <h4 class="text-base font-bold text-white flex items-center justify-between">
+                        <span>How to Test Oil Purity in 5 Minutes (At Your Desk)</span>
+                        <span class="text-xs font-mono text-cyberCyan-300 bg-cyberCyan-400/10 px-2 py-0.5 rounded border border-cyberCyan-400/20">SOP Tests</span>
+                    </h4>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/10 space-y-1.5">
+                            <span class="text-[10px] font-mono text-lemon-400 font-bold block">TEST 1 • 20 SECONDS</span>
+                            <h5 class="text-xs font-bold text-white">Cold Ethanol Mix Check</h5>
+                            <p class="text-[11px] text-slate-300 leading-normal">
+                                Put 3ml oil + 10ml pure alcohol in a clean glass vial. Shake well. Pure oil dissolves clear within seconds. If it stays cloudy or milky, it contains mineral oil or cheap wax.
+                            </p>
+                        </div>
+
+                        <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/10 space-y-1.5">
+                            <span class="text-[10px] font-mono text-neonOrange-400 font-bold block">TEST 2 • 3 HOURS</span>
+                            <h5 class="text-xs font-bold text-white">Smelling Strip Residue</h5>
+                            <p class="text-[11px] text-slate-300 leading-normal">
+                                Dip a smelling strip into the oil. Pure oil gradually blooms and develops. If after 3 hours it leaves a sticky, slimy, odorless liquid on the paper, it has been cut with DPG.
+                            </p>
+                        </div>
+
+                        <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/10 space-y-1.5">
+                            <span class="text-[10px] font-mono text-cyberCyan-400 font-bold block">TEST 3 • PRECISION</span>
+                            <h5 class="text-xs font-bold text-white">Hydrometer Density Check</h5>
+                            <p class="text-[11px] text-slate-300 leading-normal">
+                                Drop a hydrometer (<span class="text-cyberCyan-300">₨ 1,200</span> tool) into a graduated cylinder. Most fine fragrance oils have a density between 0.940 and 1.030 g/ml. If below 0.920, it is heavily watered down.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Price Reference Table for Raw Materials -->
+                    <div class="pt-2">
+                        <h5 class="text-xs font-mono uppercase text-slate-400 mb-2">Raw Oil Sourcing Rates Reference (Karachi Wholesale)</h5>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs font-mono">
+                                <thead>
+                                    <tr class="border-b border-white/10 text-slate-400 text-[11px]">
+                                        <th class="py-2">Compound Name</th>
+                                        <th class="py-2">Tier / Quality</th>
+                                        <th class="py-2">Minimum Order</th>
+                                        <th class="py-2 text-right">Market Price (PKR)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-white/5 text-slate-300">
+                                    <tr>
+                                        <td class="py-2 text-white font-semibold">Luzi Swiss Grade A</td>
+                                        <td class="py-2">Top Niche Impressions</td>
+                                        <td class="py-2">1 kg sealed can</td>
+                                        <td class="py-2 text-right text-lemon-400 font-bold">₨ 24,000 – ₨ 36,000 / kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 text-white font-semibold">Iberchem Spain</td>
+                                        <td class="py-2">Fresh / Citrus / Aquatics</td>
+                                        <td class="py-2">1 kg sealed can</td>
+                                        <td class="py-2 text-right text-cyberCyan-300 font-bold">₨ 16,000 – ₨ 24,000 / kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 text-white font-semibold">Seluz Turkish</td>
+                                        <td class="py-2">Oriental / Amber / Ouds</td>
+                                        <td class="py-2">1 kg sealed can</td>
+                                        <td class="py-2 text-right text-shockPurple-400 font-bold">₨ 17,000 – ₨ 26,000 / kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 text-white font-semibold">DPG Cutting Agent (Warning)</td>
+                                        <td class="py-2">Commercial Solvent</td>
+                                        <td class="py-2">1 kg bottle</td>
+                                        <td class="py-2 text-right text-shockPink-400">₨ 1,200 – ₨ 1,800 / kg</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 2: Solvent Chemistry & Essential Additives -->
+        <section id="module-solvent" class="space-y-6 pt-4">
+            <div class="flex items-center justify-between border-b border-shockPurple-400/30 pb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-xl bg-shockPurple-500 text-white flex items-center justify-center font-mono font-black text-sm shadow-md shadow-shockPurple-500/20">02</span>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Ethanol Science, Denaturants & Additives</h3>
+                        <p class="text-xs font-mono text-shockPurple-400 uppercase">Sugarcane ENA 96.4% vs 99.9% Absolute & Anti-Oxidation</p>
+                    </div>
+                </div>
+                <span class="text-xs font-mono text-slate-400 bg-white/5 px-2.5 py-1 rounded-lg border border-white/10">SITE • Korangi • Sugar Distilleries</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- ENA 96.4% vs 99.9% -->
+                <div class="bg-brandDark-850 p-6 rounded-2xl border border-shockPurple-400/30 space-y-3 glow-purple">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-shockPurple-400/20 text-shockPurple-300">SOLVENT OF CHOICE</span>
+                        <span class="text-xs font-mono text-white bg-white/10 px-2 py-0.5 rounded font-bold">₨ 450 - 650 / L</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">ENA 96.4% (Sugarcane Extra Neutral Alcohol)</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Why not 99.9% absolute alcohol? Because 99.9% alcohol is dehydrated using chemical catalysts like benzene. It flashes off skin instantly, burning the customer's nostrils with an intense ethanol punch.
+                    </p>
+                    <div class="p-3 bg-white/[0.03] border border-shockPurple-400/20 rounded-xl text-xs text-slate-300">
+                        <strong>Why 96.4% is Superior:</strong> The remaining 3.6% is demineralized natural water, which creates a softer, rounder skin feel and allows top notes to bloom smoothly rather than evaporating violently in 30 seconds.
+                    </div>
+                    <div class="text-[11px] font-mono text-shockPurple-300 pt-1">
+                        • 30-liter blue jerrycan: <strong>₨ 15,000 – ₨ 18,500</strong><br>
+                        • 200-liter distillery drum: <strong>₨ 340 – ₨ 420 / liter</strong>
+                    </div>
+                </div>
+
+                <!-- Denaturants & The Bitrex Disaster -->
+                <div class="bg-brandDark-850 p-6 rounded-2xl border border-neonOrange-400/30 space-y-3 glow-orange">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-neonOrange-400/20 text-neonOrange-300">DENATURANT ALERT</span>
+                        <span class="text-xs font-mono text-white bg-white/10 px-2 py-0.5 rounded font-bold">Avoid Bitter Mist</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Bitrex & DEP (The Lip-Taste Trap)</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        In Pakistan, commercial alcohol is denatured (rendered undrinkable). If your supplier uses too much <strong>Bitrex (Denatonium Benzoate)</strong>, the spray mist will leave a disgusting, intense bitter taste on the customer's lips and neck for hours.
+                    </p>
+                    <div class="p-3 bg-neonOrange-500/10 border border-neonOrange-500/20 rounded-xl text-xs text-neonOrange-300">
+                        <strong>Quality Specification:</strong> Specify <em>SDA-40B formulation with under 10 ppm Bitrex</em> or tertiary butyl alcohol (TBA). 
+                        <br><br>
+                        <strong>Never use DEP (Diethyl Phthalate):</strong> Though common in Bolton Market, DEP is banned in modern EU cosmetics and causes hormonal disruption.
+                    </div>
+                </div>
+
+                <!-- Fixatives & Antioxidants -->
+                <div class="bg-brandDark-850 p-6 rounded-2xl border border-cyberCyan-400/30 space-y-3 glow-cyan">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-cyberCyan-400/20 text-cyberCyan-300">LONGEVITY SHIELD</span>
+                        <span class="text-xs font-mono text-white bg-white/10 px-2 py-0.5 rounded font-bold">Key Additives</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Glucam P-20, BHT & Boosters</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        To survive Pakistan's harsh 42°C summers without scent breakdown, you need two inexpensive ingredients:
+                    </p>
+                    <div class="space-y-2 text-xs font-mono">
+                        <div class="p-2.5 bg-white/[0.03] rounded-xl border border-white/10">
+                            <div class="flex justify-between text-cyberCyan-300 font-bold">
+                                <span>Glucam P-20 (0.75%)</span>
+                                <span>₨ 5,500 / 1kg</span>
+                            </div>
+                            <span class="text-[11px] text-slate-400">Natural glucose humectant. Anchors the fragrance molecules to skin, adding 2–3 hours of longevity.</span>
+                        </div>
+                        <div class="p-2.5 bg-white/[0.03] rounded-xl border border-white/10">
+                            <div class="flex justify-between text-lemon-400 font-bold">
+                                <span>BHT Antioxidant (0.05%)</span>
+                                <span>₨ 1,600 / 500g</span>
+                            </div>
+                            <span class="text-[11px] text-slate-400">Stops vanillin and citrus from turning dark brown or smelling like rotten oil under shelf lighting.</span>
+                        </div>
+                        <div class="p-2.5 bg-white/[0.03] rounded-xl border border-white/10">
+                            <div class="flex justify-between text-shockPink-400 font-bold">
+                                <span>Hedione Booster (1.5%)</span>
+                                <span>₨ 8,500 / 1kg</span>
+                            </div>
+                            <span class="text-[11px] text-slate-400">Adds airiness and sillage bloom so the scent radiates in a room.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Milky Perfume Problem (Louching / Ouzo Effect) -->
+            <div class="bg-brandDark-850 p-6 rounded-2xl border border-white/10 space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <h4 class="text-base font-bold text-white flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-shockPink-500 animate-pulse"></span>
+                        Why Did My Perfume Turn Milky? (The Louching Effect Explained Simply)
+                    </h4>
+                    <span class="text-xs font-mono text-shockPink-400 bg-shockPink-500/10 px-2.5 py-1 rounded border border-shockPink-500/20">Common Novice Mistake</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                    If someone adds regular distilled water to "soften the alcohol," or buys low-grade 85% ethanol from a local chemical trader, the essential natural terpenes inside the oil <strong>instantly crash out of solution</strong> into millions of microscopic oil droplets. Your batch permanently turns into a milky cloudy mess (like mixing water into anisette or milk). Once this happens, no paper filter can clear it.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs font-mono">
+                    <div class="p-3 bg-lemon-400/10 border border-lemon-400/30 rounded-xl">
+                        <span class="text-lemon-400 font-bold block mb-1">ENA 96.4% ALCOHOL</span>
+                        <span class="text-slate-300">Contains 3.6% balanced water. Result: 100% crystal-clear dissolution. <strong>Zero cloudiness risk.</strong></span>
+                    </div>
+                    <div class="p-3 bg-neonOrange-500/10 border border-neonOrange-500/30 rounded-xl">
+                        <span class="text-neonOrange-400 font-bold block mb-1">90% COMMERCIAL ALCOHOL</span>
+                        <span class="text-slate-300">Contains 10% water. Borderline stability. Clouds whenever temperatures drop below 20°C in winter.</span>
+                    </div>
+                    <div class="p-3 bg-shockPink-500/10 border border-shockPink-500/30 rounded-xl">
+                        <span class="text-shockPink-400 font-bold block mb-1">ADDED TAP / RO WATER</span>
+                        <span class="text-slate-300">Fatal blunder. Drops oil out of solution. Batch becomes a cloudy chalky liquid. Complete financial loss.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 3: Maceration & Chill Filtration SOP -->
+        <section id="module-filtration" class="space-y-6 pt-4">
+            <div class="flex items-center justify-between border-b border-cyberCyan-400/30 pb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-xl bg-cyberCyan-400 text-black flex items-center justify-center font-mono font-black text-sm shadow-md shadow-cyberCyan-400/20">03</span>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Manufacturing, Maceration & Chill Filtration SOP</h3>
+                        <p class="text-xs font-mono text-cyberCyan-400 uppercase">Chemical Aging (28 Days) & Eliminating "Winter Dust" Complaints</p>
+                    </div>
+                </div>
+                <span class="text-xs font-mono text-slate-400 bg-white/5 px-2.5 py-1 rounded-lg border border-white/10">Lab Protocols • Glassware Rates</span>
+            </div>
+
+            <!-- Process Step Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-brandDark-850 p-5 rounded-2xl border border-white/10 space-y-2 hover:border-lemon-400 transition-all">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-mono font-black text-lemon-400 bg-lemon-400/10 px-2 py-0.5 rounded border border-lemon-400/20">STEP 1</span>
+                        <span class="text-[11px] text-slate-400 font-mono">0.01g Balance</span>
+                    </div>
+                    <h4 class="text-sm font-bold text-white">Weigh in Grams (Never ml)</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Liquid expands and shrinks with Karachi's heat. 100ml in June is completely different from 100ml in January. <strong>Always measure by weight (Grams) on a digital scale</strong> (<span class="text-lemon-400">₨ 3,500</span>).
+                    </p>
+                </div>
+
+                <div class="bg-brandDark-850 p-5 rounded-2xl border border-white/10 space-y-2 hover:border-shockPurple-400 transition-all">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-mono font-black text-shockPurple-400 bg-shockPurple-400/10 px-2 py-0.5 rounded border border-shockPurple-400/20">STEP 2</span>
+                        <span class="text-[11px] text-slate-400 font-mono">28 - 35 Days</span>
+                    </div>
+                    <h4 class="text-sm font-bold text-white">Dark Maceration (Maturation)</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Combine Oil + ENA Alcohol + Glucam + BHT in amber glass demijohns or food-grade SS316 stainless containers. Store in an air-conditioned room (20°C–22°C). Alcohol bonds with oils, smoothing the initial bite.
+                    </p>
+                </div>
+
+                <div class="bg-brandDark-850 p-5 rounded-2xl border border-white/10 space-y-2 hover:border-cyberCyan-400 transition-all">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-mono font-black text-cyberCyan-400 bg-cyberCyan-400/10 px-2 py-0.5 rounded border border-cyberCyan-400/20">STEP 3</span>
+                        <span class="text-[11px] text-slate-400 font-mono">48 Hours @ 0°C</span>
+                    </div>
+                    <h4 class="text-sm font-bold text-white">Chill Shock Stabilization</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Place the rested perfume in a freezer set at <strong>-2°C to +2°C</strong> for 48 hours. This freezes invisible plant waxes, forcing them to group into visible solid flakes while cold.
+                    </p>
+                </div>
+
+                <div class="bg-brandDark-850 p-5 rounded-2xl border border-white/10 space-y-2 hover:border-shockPink-400 transition-all">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-mono font-black text-shockPink-400 bg-shockPink-400/10 px-2 py-0.5 rounded border border-shockPink-400/20">STEP 4</span>
+                        <span class="text-[11px] text-slate-400 font-mono">Buchner Funnel</span>
+                    </div>
+                    <h4 class="text-sm font-bold text-white">Cold Vacuum Clarification</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Filter the liquid <strong>immediately while it is ice cold</strong> through Whatman Grade 1 (11 µm) filter paper. The waxes stay trapped on paper. The juice stays diamond-clear forever!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Deep Freeze Clarification Insight & Equipment Rates -->
+            <div class="bg-gradient-to-r from-brandDark-850 via-cyberCyan-950/40 to-brandDark-850 p-6 rounded-2xl border border-cyberCyan-400/30 space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <h4 class="text-base font-bold text-white flex items-center gap-2">
+                        <span class="text-cyberCyan-300 font-mono">💡 THE WINTER RETURN CRISIS:</span>
+                        Why Customers Complain About "Dirt in My Bottle"
+                    </h4>
+                    <span class="text-xs font-mono text-cyberCyan-300 bg-cyberCyan-400/10 px-2 py-0.5 rounded border border-cyberCyan-400/30">Solved Permanently</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                    Most Pakistani indie houses mix and bottle perfume in a hot room in August at 34°C. The liquid looks crystal clear. But in December, when that bottle reaches a customer in Islamabad, Quetta, or Lahore where it's 6°C, microscopic botanical waxes turn into white flakes. The customer thinks it's dirt or cheap counterfeit product and demands their money back. <strong>Chill filtration permanently eliminates this customer return risk.</strong>
+                </p>
+                
+                <!-- Laboratory Equipment Price Guide -->
+                <div class="pt-2 border-t border-white/10">
+                    <h5 class="text-xs font-mono uppercase text-slate-400 mb-2">Essential Filtration Gear & Local Karachi Rates (Urdu Bazar / Saddar Lab Shops)</h5>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
+                        <div class="p-3 bg-black/40 rounded-xl border border-white/10 flex justify-between items-center">
+                            <div>
+                                <strong class="text-white block font-sans">Buchner Vacuum Funnel Kit</strong>
+                                <span class="text-[11px] text-slate-400">1000ml Flask + Ceramic Funnel</span>
+                            </div>
+                            <span class="text-cyberCyan-300 font-bold">₨ 9,500 – ₨ 14,000</span>
+                        </div>
+                        <div class="p-3 bg-black/40 rounded-xl border border-white/10 flex justify-between items-center">
+                            <div>
+                                <strong class="text-white block font-sans">Whatman Filter Papers</strong>
+                                <span class="text-[11px] text-slate-400">Grade 1 (11 µm) 100 Pack</span>
+                            </div>
+                            <span class="text-lemon-400 font-bold">₨ 3,200 – ₨ 4,800</span>
+                        </div>
+                        <div class="p-3 bg-black/40 rounded-xl border border-white/10 flex justify-between items-center">
+                            <div>
+                                <strong class="text-white block font-sans">Hand Vacuum Pump / Mini Electric</strong>
+                                <span class="text-[11px] text-slate-400">Pulls cold liquid rapidly</span>
+                            </div>
+                            <span class="text-shockPurple-400 font-bold">₨ 5,500 – ₨ 9,500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 4: Bottles, Atomizers & Crimp Engineering -->
+        <section id="module-crimp" class="space-y-6 pt-4">
+            <div class="flex items-center justify-between border-b border-neonOrange-400/30 pb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-xl bg-neonOrange-500 text-black flex items-center justify-center font-mono font-black text-sm shadow-md shadow-neonOrange-500/20">04</span>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Bottles, Atomizers & Crimp Engineering</h3>
+                        <p class="text-xs font-mono text-neonOrange-400 uppercase">FEA 15 Crimp Standard, Benchtop Collet Machines & Rates</p>
+                    </div>
+                </div>
+                <span class="text-xs font-mono text-slate-400 bg-white/5 px-2.5 py-1 rounded-lg border border-white/10">Bottle Gali • Altaf Hussain Road</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Screw vs Crimp Neck -->
+                <div class="bg-brandDark-850 p-6 rounded-2xl border border-shockPink-500/30 space-y-4 glow-pink">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-shockPink-500/20 text-shockPink-400">CRITICAL DECISION</span>
+                        <span class="text-xs font-bold text-white font-mono bg-white/10 px-2 py-0.5 rounded">65% of Leaks</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Why Screw-Neck Bottles Will Ruin Your Brand</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Screw-neck bottles look tempting because they need no crimping tool. But in Pakistan, courier delivery vans drive over rough roads in intense heat. Screw caps loosen under vibration. By the time the customer opens the package, 15ml of perfume has soaked into the cardboard box.
+                    </p>
+                    <div class="p-3 bg-shockPink-500/10 border border-shockPink-500/30 rounded-xl text-xs text-shockPink-300 font-semibold">
+                        Non-Negotiable Rule: Use only <strong>FEA 15 Crimp-Neck Bottles</strong>. The aluminum ferrule permanently compresses an internal rubber gasket against the glass lip, creating a 100% airtight hermetic seal that never leaks.
+                    </div>
+                </div>
+
+                <!-- Crimp Calibration & Machine Prices -->
+                <div class="bg-brandDark-850 p-6 rounded-2xl border border-neonOrange-400/30 space-y-4 glow-orange">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-neonOrange-400/20 text-neonOrange-400">MACHINE SPECS</span>
+                        <span class="text-xs font-bold text-white font-mono bg-white/10 px-2 py-0.5 rounded">Benchtop Lever</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Crimping Tools & Accurate Calibration</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Never crimp bottles using hand-held plier crimpers! Hand pliers squeeze unevenly, ovalizing the collar and cutting the rubber gasket. Use a <strong>Benchtop Manual Lever Collet Crimper</strong>.
+                    </p>
+                    <div class="space-y-1.5 text-xs font-mono text-slate-300 bg-white/[0.03] p-3 rounded-xl border border-white/10">
+                        <div>• Crimp Diameter Target: <strong class="text-neonOrange-400">14.85 mm – 15.05 mm</strong></div>
+                        <div>• Crimp Depth: <strong class="text-neonOrange-400">6.8 mm – 7.1 mm</strong></div>
+                        <div>• Check daily using a <strong>Digital Vernier Caliper</strong>.</div>
+                    </div>
+                    <div class="text-[11px] font-mono text-neonOrange-300">
+                        • Benchtop Collet Machine: <strong>₨ 28,000 – ₨ 42,000</strong><br>
+                        • Digital Vernier Caliper: <strong>₨ 1,800 – ₨ 2,800</strong>
+                    </div>
+                </div>
+
+                <!-- Atomizer Dispersal & Dip Tube Angles -->
+                <div class="bg-brandDark-850 p-6 rounded-2xl border border-cyberCyan-400/30 space-y-4 glow-cyan">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-cyberCyan-400/20 text-cyberCyan-300">ATOMIZATION</span>
+                        <span class="text-xs font-bold text-white font-mono bg-white/10 px-2 py-0.5 rounded">Luxury Mist</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Spray Feel & 45° Dip-Tube Cut</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Customers judge luxury by the sound and tactile sensation of the spray. Avoid cheap water-gun pumps that shoot a heavy squirt.
+                    </p>
+                    <ul class="text-xs space-y-2 text-slate-300">
+                        <li>• <strong>Dispense Volume:</strong> Specify <strong>0.08ml to 0.10ml per stroke</strong> micro-fine mist actuators for a delicate cloud.</li>
+                        <li>• <strong>Dip Tube Geometry:</strong> Cut dip tubes at an exact <strong>45-degree angle</strong> resting against the bottom rear corner of the bottle. A flat 90-degree cut suctions against the glass floor, trapping the last 4ml of perfume.</li>
+                    </ul>
+                    <div class="text-[11px] font-mono text-cyberCyan-300">
+                        • FEA 15 Mist Pump + Aluminum Collar: <strong>₨ 28 – ₨ 42 / piece</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Glass Bottle Sourcing Price Reference Table -->
+            <div class="bg-brandDark-850 p-6 rounded-2xl border border-white/10 space-y-3">
+                <h4 class="text-base font-bold text-white">Bottle & Cap Wholesale Prices (Bottle Gali, Light House Karachi)</h4>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs font-mono">
+                        <thead>
+                            <tr class="border-b border-white/10 text-slate-400 text-[11px]">
+                                <th class="py-2">Item Description</th>
+                                <th class="py-2">Neck Standard</th>
+                                <th class="py-2">Carton MOQ</th>
+                                <th class="py-2 text-right">Wholesale Rate (PKR)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5 text-slate-300">
+                            <tr>
+                                <td class="py-2 text-white font-semibold">50ml Standard Flint Glass (Heavy Base)</td>
+                                <td class="py-2">FEA 15 Crimp</td>
+                                <td class="py-2">120 - 240 pcs</td>
+                                <td class="py-2 text-right text-lemon-400 font-bold">₨ 95 – ₨ 145 / piece</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 text-white font-semibold">100ml Premium Thick Base Clear Glass</td>
+                                <td class="py-2">FEA 15 Crimp</td>
+                                <td class="py-2">80 - 160 pcs</td>
+                                <td class="py-2 text-right text-lemon-400 font-bold">₨ 135 – ₨ 195 / piece</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 text-white font-semibold">FEA 15 Anodized Mist Pump + Shiny Collar</td>
+                                <td class="py-2">Silver / Gold / Matte Black</td>
+                                <td class="py-2">500 pcs bag</td>
+                                <td class="py-2 text-right text-cyberCyan-300 font-bold">₨ 28 – ₨ 42 / piece</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 text-white font-semibold">Luxury Heavy Zamak / Magnetic Cap</td>
+                                <td class="py-2">Fits FEA 15 Collar</td>
+                                <td class="py-2">200 pcs</td>
+                                <td class="py-2 text-right text-shockPurple-400 font-bold">₨ 65 – ₨ 115 / piece</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 text-white font-semibold">Standard Acrylic / Surlyn Clear Cap</td>
+                                <td class="py-2">Fits FEA 15 Collar</td>
+                                <td class="py-2">500 pcs</td>
+                                <td class="py-2 text-right text-slate-300">₨ 20 – ₨ 35 / piece</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 5: Packaging & Courier Transit Defense -->
+        <section id="module-packaging" class="space-y-6 pt-4">
+            <div class="flex items-center justify-between border-b border-shockPink-400/30 pb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-xl bg-shockPink-500 text-white flex items-center justify-center font-mono font-black text-sm shadow-md shadow-shockPink-500/20">05</span>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Transit Packaging & Courier Survival</h3>
+                        <p class="text-xs font-mono text-shockPink-400 uppercase">Trax, PostEx, TCS Proofing: Rigid Boxes & Black EVA Foam</p>
+                    </div>
+                </div>
+                <span class="text-xs font-mono text-slate-400 bg-white/5 px-2.5 py-1 rounded-lg border border-white/10">Paper Market • Burns Road</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 1200 GSM Rigid Box -->
+                <div class="bg-brandDark-850 p-6 rounded-2xl border border-shockPink-400/30 space-y-3 glow-pink">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-shockPink-500/20 text-shockPink-400">UNBOXING INTEGRITY</span>
+                        <span class="text-xs font-mono text-white bg-white/10 px-2 py-0.5 rounded font-bold">₨ 110 - 175 / box</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">1200 GSM Greyboard Rigid Box</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Never use soft 350 GSM folding cardstock boxes. When courier sorting centers throw 10kg packages onto delivery sacks, flimsy cardstock crushes instantly.
+                    </p>
+                    <div class="p-3 bg-white/[0.03] rounded-xl text-xs space-y-1.5 text-slate-300 font-mono">
+                        <div>• Core: <strong>1200 to 1400 GSM hard greyboard</strong></div>
+                        <div>• Wrap: <strong>150 GSM art paper + Matte lamination</strong></div>
+                        <div>• Stamping: <strong>Gold / Silver foil heat-bonded &gt; 120°C</strong> (stops foil peeling in humid weather).</div>
+                    </div>
+                </div>
+
+                <!-- EVA Foam vs Cheap Sponge -->
+                <div class="bg-brandDark-850 p-6 rounded-2xl border border-lemon-400/30 space-y-3 glow-lemon">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-lemon-400/20 text-lemon-400">INTERNAL CUSHION</span>
+                        <span class="text-xs font-mono text-white bg-white/10 px-2 py-0.5 rounded font-bold">₨ 28 - 45 / pc</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Black High-Density EVA Foam</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Do not use yellow/white packing sponge or cheap thermocol. If exposed to micro-vapors of alcohol, low-grade sponge chemically melts and leaves a nasty sticky goo on your glass bottle.
+                    </p>
+                    <div class="p-3 bg-lemon-400/10 border border-lemon-400/30 rounded-xl text-xs text-lemon-300">
+                        <strong>The Only Solution:</strong> <strong>Laser die-cut High Density Black EVA Foam</strong> (Shore Hardness 45C) topped with black velvet. It cushions drops from 5 feet without breaking.
+                    </div>
+                </div>
+
+                <!-- Cellophane & Shipping Box -->
+                <div class="bg-brandDark-850 p-6 rounded-2xl border border-cyberCyan-400/30 space-y-3 glow-cyan">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-cyberCyan-400/20 text-cyberCyan-300">SEAL & COURIERS</span>
+                        <span class="text-xs font-mono text-white bg-white/10 px-2 py-0.5 rounded font-bold">₨ 25 - 40 / pack</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">BOPP Cellophane & Corrugated Shipper</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Protect your rigid box from rain, moisture, and fingerprints with heat-ironed cellophane and a dedicated mailing shipper.
+                    </p>
+                    <ul class="text-xs space-y-2 text-slate-300 font-mono">
+                        <li>• <strong>BOPP 25-micron Film + Tear Strip:</strong> ₨ 4 – ₨ 6 per box. Gives an authentic, sealed luxury feel.</li>
+                        <li>• <strong>3-Ply E-Flute Outer Shipper Box:</strong> ₨ 22 – ₨ 35 per box. Takes 100% of the courier abuse.</li>
+                        <li>• <strong>Courier COD rates (Trax/PostEx/TCS):</strong> ₨ 190 – ₨ 260 per delivery + 3% cash handling fee.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 6: Karachi Boots-On-The-Ground Sourcing Map -->
+        <section id="module-karachi" class="space-y-6 pt-4">
+            <div class="flex items-center justify-between border-b border-lemon-400/30 pb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-xl bg-lemon-400 text-black flex items-center justify-center font-mono font-black text-sm shadow-md shadow-lemon-400/20">06</span>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Karachi Sourcing Map: Where to Buy What</h3>
+                        <p class="text-xs font-mono text-lemon-400 uppercase">Direct Wholesale Bazaars, Hubs & Negotiation Tactics</p>
+                    </div>
+                </div>
+                <span class="text-xs font-mono text-slate-400 bg-white/5 px-2.5 py-1 rounded-lg border border-white/10">Physical Market Guide</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Bolton Market -->
+                <div class="p-5 bg-brandDark-850 rounded-2xl border border-lemon-400/30 space-y-3 glow-lemon">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold font-mono px-2 py-0.5 bg-lemon-400/20 text-lemon-300 rounded">OILS & COMPOUNDS</span>
+                        <span class="text-[10px] text-slate-400 font-mono">SADDAR / SOUTH</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Bolton Market & Marriot Rd</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        The heartbeat of perfume oils. Concentrated around Lakshmi Building, Kagzi Bazar, and surrounding gallis.
+                    </p>
+                    <div class="text-[11px] font-mono text-lemon-300 bg-black/40 p-2.5 rounded-xl border border-white/10">
+                        <strong>Buying Rule:</strong> Walk straight past retail counters selling loose attar decants. Go upstairs to primary importers. Ask for sealed factory drums only.
+                    </div>
+                </div>
+
+                <!-- Bottle Gali -->
+                <div class="p-5 bg-brandDark-850 rounded-2xl border border-cyberCyan-400/30 space-y-3 glow-cyan">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold font-mono px-2 py-0.5 bg-cyberCyan-400/20 text-cyberCyan-300 rounded">GLASS & ATOMIZERS</span>
+                        <span class="text-[10px] text-slate-400 font-mono">LIGHT HOUSE</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Bottle Gali & Altaf Hussain Rd</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Pakistan’s largest glass bazaar. Millions of imported Chinese and local flint glass bottles, crimp pumps, and caps.
+                    </p>
+                    <div class="text-[11px] font-mono text-cyberCyan-300 bg-black/40 p-2.5 rounded-xl border border-white/10">
+                        <strong>Buying Rule:</strong> Bring your own collet crimp test machine. Crimp 3 sample bottles right in front of the shopkeeper to check glass neck thickness before buying cartons.
+                    </div>
+                </div>
+
+                <!-- Paper Market -->
+                <div class="p-5 bg-brandDark-850 rounded-2xl border border-shockPink-400/30 space-y-3 glow-pink">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold font-mono px-2 py-0.5 bg-shockPink-500/20 text-shockPink-400 rounded">BOXES & EVA FOAM</span>
+                        <span class="text-[10px] text-slate-400 font-mono">PAKISTAN CHOWK</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Paper Market & Burns Road</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Hub for rigid box makers, hot foil stampers, embossing die engravers, and laser EVA foam cutters.
+                    </p>
+                    <div class="text-[11px] font-mono text-shockPink-300 bg-black/40 p-2.5 rounded-xl border border-white/10">
+                        <strong>Buying Rule:</strong> Give them an empty perfume bottle and demand a "White Dummy Box" (plain unprinted structural sample) to verify bottle snugness before paying 50% deposit.
+                    </div>
+                </div>
+
+                <!-- Alcohol Distilleries & Chemical Agents -->
+                <div class="p-5 bg-brandDark-850 rounded-2xl border border-shockPurple-400/30 space-y-3 glow-purple">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold font-mono px-2 py-0.5 bg-shockPurple-400/20 text-shockPurple-300 rounded">ENA ETHANOL</span>
+                        <span class="text-[10px] text-slate-400 font-mono">SITE / KORANGI</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Chemical Agents & Distilleries</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Authorized agents for top Pakistani sugarcane distilleries (Unicol, Shakarganj, Hunza, Al-Abbas).
+                    </p>
+                    <div class="text-[11px] font-mono text-shockPurple-300 bg-black/40 p-2.5 rounded-xl border border-white/10">
+                        <strong>Buying Rule:</strong> Always ask for the chemical COA (Certificate of Analysis) sheet confirming ENA grade ≥ 96.4% and zero rotten molasses/acetaldehyde stench.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 7: Five Non-Negotiable Insider Rules -->
+        <section id="module-tips" class="space-y-6 pt-4">
+            <div class="flex items-center justify-between border-b border-neonOrange-400/30 pb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-xl bg-neonOrange-500 text-black flex items-center justify-center font-mono font-black text-sm shadow-md shadow-neonOrange-500/20">07</span>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Five Non-Negotiable Insider Rules for Perfume Founders</h3>
+                        <p class="text-xs font-mono text-neonOrange-400 uppercase">Battle-Tested Truths Learned From Losing Millions of Rupees</p>
+                    </div>
+                </div>
+                <span class="text-xs font-mono text-slate-400 bg-white/5 px-2.5 py-1 rounded-lg border border-white/10">Strategic Guardrails</span>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Tip 1 -->
+                <div class="p-5 sm:p-6 bg-brandDark-850 rounded-2xl border-l-4 border-l-lemon-400 border border-white/10 flex flex-col md:flex-row gap-4 glow-lemon">
+                    <div class="md:w-14 flex-shrink-0 flex items-start">
+                        <span class="text-2xl font-black font-mono text-lemon-400">01</span>
+                    </div>
+                    <div class="space-y-1.5 flex-grow">
+                        <h4 class="text-base font-bold text-white">Never Purchase Open Decanted Oil Liters—Enforce Sealed Drums Only</h4>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            No matter how friendly or religious the Bolton Market shopkeeper sounds, if they are decanting oil from an open plastic jerrycan into your bottle, <strong>you are being cheated with 15%–35% DPG or odorless mineral oil</strong>. That oil will feel greasy, stain apparel, and project for only 45 minutes instead of 8 hours. Buy only factory-sealed 1kg or 5kg aluminum canisters with intact factory shrink-wrap.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tip 2 -->
+                <div class="p-5 sm:p-6 bg-brandDark-850 rounded-2xl border-l-4 border-l-neonOrange-400 border border-white/10 flex flex-col md:flex-row gap-4 glow-orange">
+                    <div class="md:w-14 flex-shrink-0 flex items-start">
+                        <span class="text-2xl font-black font-mono text-neonOrange-400">02</span>
+                    </div>
+                    <div class="space-y-1.5 flex-grow">
+                        <h4 class="text-base font-bold text-white">Crimp Integrity Beats Beautiful Label Artwork Every Single Day</h4>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            New owners spend ₨ 200,000 on branding, photographers, and Instagram influencers, but assemble screw-neck bottles with hand pliers. A single customer opening a wet, leaking parcel will leave a scathing review on Reddit or Facebook that costs you 20 future sales. <strong>Buy a ₨ 35,000 benchtop collet crimper before spending a single rupee on PR shoots.</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tip 3 -->
+                <div class="p-5 sm:p-6 bg-brandDark-850 rounded-2xl border-l-4 border-l-cyberCyan-400 border border-white/10 flex flex-col md:flex-row gap-4 glow-cyan">
+                    <div class="md:w-14 flex-shrink-0 flex items-start">
+                        <span class="text-2xl font-black font-mono text-cyberCyan-400">03</span>
+                    </div>
+                    <div class="space-y-1.5 flex-grow">
+                        <h4 class="text-base font-bold text-white">Always Keep a 90-Day Raw Material Safety Stock in Inventory</h4>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Pakistan's import supply chain is constantly disrupted by port delays at Karachi Port / Port Qasim, LC constraints, and dollar exchange swings. If your best-selling signature SKU goes out of stock, local hoarders will demand ₨ 45,000/kg for a ₨ 24,000 Luzi oil. Maintain a rolling 3-month safety buffer of your core bottles, crimp atomizers, and top 3 oils at all times.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tip 4 -->
+                <div class="p-5 sm:p-6 bg-brandDark-850 rounded-2xl border-l-4 border-l-shockPurple-400 border border-white/10 flex flex-col md:flex-row gap-4 glow-purple">
+                    <div class="md:w-14 flex-shrink-0 flex items-start">
+                        <span class="text-2xl font-black font-mono text-shockPurple-400">04</span>
+                    </div>
+                    <div class="space-y-1.5 flex-grow">
+                        <h4 class="text-base font-bold text-white">Honor the 30-Day Resting Rule—Never Ship Freshly Mixed Juice</h4>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            When perfume oil is freshly mixed with ethanol, the molecules are mechanically stirred but not chemically bonded. It smells harsh, sharp, and predominantly of rubbing alcohol. It takes 25 to 35 days in a cool, dark room for esterification and loose hydrogen clustering to occur. Plan your production runs 40 days ahead of schedule so every bottle you dispatch is silky smooth and long-lasting.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tip 5 -->
+                <div class="p-5 sm:p-6 bg-brandDark-850 rounded-2xl border-l-4 border-l-shockPink-500 border border-white/10 flex flex-col md:flex-row gap-4 glow-pink">
+                    <div class="md:w-14 flex-shrink-0 flex items-start">
+                        <span class="text-2xl font-black font-mono text-shockPink-400">05</span>
+                    </div>
+                    <div class="space-y-1.5 flex-grow">
+                        <h4 class="text-base font-bold text-white">Archive a 20ml "Retain Sample" From Every Single Batch</h4>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Whenever a batch is bottled, save two 20ml amber glass sample bottles, seal them with paraffin tape, write the batch number and date, and store them in an air-conditioned locker. When a reviewer claims online that "your new batch is diluted and doesn't last like before," you can immediately spray the retain sample side-by-side to prove your quality control and protect your brand's reputation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 8: Interactive Batch & Financial Cost Calculator -->
+        <section id="module-calculator" class="space-y-6 pt-4">
+            <div class="flex items-center justify-between border-b border-cyberCyan-400/30 pb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-xl bg-gradient-to-r from-lemon-400 to-cyberCyan-400 text-black flex items-center justify-center font-mono font-black text-sm shadow-md">08</span>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Interactive Production & Financial Cost Calculator</h3>
+                        <p class="text-xs font-mono text-cyberCyan-300 uppercase">Real-Time Mass (Grams) + Total Cost per Bottle in PKR</p>
+                    </div>
+                </div>
+                <span class="text-xs font-mono text-lemon-400 bg-lemon-400/10 px-2.5 py-1 rounded-lg border border-lemon-400/20">Live Financial Engine</span>
+            </div>
+
+            <div class="bg-brandDark-850 p-6 sm:p-8 rounded-3xl border border-white/15 shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Batch Formulation Controls -->
+                    <div class="lg:col-span-6 space-y-4">
+                        <h4 class="text-sm font-mono uppercase font-bold text-slate-300 flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-lemon-400"></span> Batch Parameters & Real-Time Rates (PKR)
+                        </h4>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Concentration</label>
+                                <select id="calc-concentration" onchange="runLiveBatch()" class="w-full bg-black/60 border border-white/15 rounded-xl px-3 py-2 text-xs font-medium text-white focus:outline-none focus:border-lemon-400">
+                                    <option value="0.30">Extrait de Parfum (30% Oil)</option>
+                                    <option value="0.25">Eau de Parfum Intense (25% Oil)</option>
+                                    <option value="0.20" selected>Eau de Parfum Standard (20% Oil)</option>
+                                    <option value="0.15">Eau de Toilette (15% Oil)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Bottle Size</label>
+                                <select id="calc-bottle-vol" onchange="runLiveBatch()" class="w-full bg-black/60 border border-white/15 rounded-xl px-3 py-2 text-xs font-mono text-white focus:outline-none focus:border-lemon-400">
+                                    <option value="50" selected>50 ml</option>
+                                    <option value="100">100 ml</option>
+                                    <option value="30">30 ml</option>
+                                    <option value="15">15 ml Pocket</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Units (Bottles)</label>
+                                <input type="number" id="calc-units" value="100" min="1" max="10000" oninput="runLiveBatch()" class="w-full bg-black/60 border border-white/15 rounded-xl px-3 py-2 text-xs font-mono text-white focus:outline-none focus:border-lemon-400">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Oil Price (PKR / kg)</label>
+                                <input type="number" id="calc-oil-rate" value="26000" min="5000" max="60000" step="500" oninput="runLiveBatch()" class="w-full bg-black/60 border border-white/15 rounded-xl px-3 py-2 text-xs font-mono text-lemon-400 font-bold focus:outline-none focus:border-lemon-400">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-2 pt-1">
+                            <div>
+                                <label class="block text-[11px] font-semibold text-slate-300 mb-1">Ethanol / Litre</label>
+                                <input type="number" id="calc-alc-rate" value="550" oninput="runLiveBatch()" class="w-full bg-black/60 border border-white/15 rounded-xl px-2.5 py-1.5 text-xs font-mono text-white focus:outline-none focus:border-shockPurple-400">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-semibold text-slate-300 mb-1">Bottle + Pump</label>
+                                <input type="number" id="calc-bottle-rate" value="150" oninput="runLiveBatch()" class="w-full bg-black/60 border border-white/15 rounded-xl px-2.5 py-1.5 text-xs font-mono text-white focus:outline-none focus:border-cyberCyan-400">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-semibold text-slate-300 mb-1">Box + EVA Foam</label>
+                                <input type="number" id="calc-box-rate" value="160" oninput="runLiveBatch()" class="w-full bg-black/60 border border-white/15 rounded-xl px-2.5 py-1.5 text-xs font-mono text-white focus:outline-none focus:border-shockPink-400">
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Longevity Additives</label>
+                            <div class="flex items-center space-x-4 text-xs font-mono text-slate-300">
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" id="calc-include-glucam" checked onchange="runLiveBatch()" class="rounded text-lemon-400 focus:ring-0">
+                                    <span>Glucam P-20 (0.75%)</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" id="calc-include-bht" checked onchange="runLiveBatch()" class="rounded text-cyberCyan-400 focus:ring-0">
+                                    <span>BHT (0.05%)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Output Dashboard: Formula Grams & Unit Cost -->
+                    <div class="lg:col-span-6 bg-black/50 p-6 rounded-2xl border border-white/15 flex flex-col justify-between space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-3">
+                                <div>
+                                    <span class="text-[11px] font-mono font-bold text-cyberCyan-300 uppercase">Mass Bill of Materials</span>
+                                    <h5 class="text-base font-black text-white" id="batch-total-mass">Total Batch Mass: 0.00 kg</h5>
+                                </div>
+                                <span class="px-2.5 py-1 bg-white/10 text-white text-xs font-mono font-bold rounded-lg" id="batch-badge">100 x 50ml</span>
+                            </div>
+
+                            <!-- Weight Ingredients breakdown -->
+                            <div class="space-y-2 text-xs font-mono">
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-white/[0.03] border border-white/5">
+                                    <span class="text-slate-300 flex items-center gap-1.5">
+                                        <span class="w-2 h-2 rounded-full bg-lemon-400"></span> Pure Fragrance Oil
+                                    </span>
+                                    <span class="font-bold text-lemon-400" id="res-oil-mass">0 g (0 kg)</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-white/[0.03] border border-white/5">
+                                    <span class="text-slate-300 flex items-center gap-1.5">
+                                        <span class="w-2 h-2 rounded-full bg-shockPurple-400"></span> ENA 96.4% Alcohol
+                                    </span>
+                                    <span class="font-bold text-white" id="res-alc-mass">0 g (0 kg)</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-white/[0.03] border border-white/5">
+                                    <span class="text-slate-300 flex items-center gap-1.5">
+                                        <span class="w-2 h-2 rounded-full bg-cyberCyan-400"></span> Glucam P-20 + BHT
+                                    </span>
+                                    <span class="font-bold text-slate-300" id="res-additives-mass">0 g</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Financial Production Cost Output -->
+                        <div class="pt-3 border-t border-white/10 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-mono text-slate-400 uppercase">Juice Liquid Cost / Bottle:</span>
+                                <span class="text-xs font-mono font-bold text-lemon-400" id="res-juice-cost">₨ 0.00</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-mono text-slate-400 uppercase">Bottle + Pump + Box + Foam:</span>
+                                <span class="text-xs font-mono font-bold text-slate-300" id="res-pack-cost">₨ 0.00</span>
+                            </div>
+                            
+                            <!-- Highlighted Total Cost per Packaged Bottle -->
+                            <div class="p-3.5 bg-gradient-to-r from-lemon-400/20 via-cyberCyan-400/20 to-shockPink-500/20 border border-lemon-400/50 rounded-xl flex items-center justify-between glow-lemon">
+                                <div>
+                                    <span class="text-[10px] font-mono uppercase tracking-wider text-slate-300 block font-bold">Total Finished Unit Cost</span>
+                                    <span class="text-xl sm:text-2xl font-black text-white font-mono" id="res-total-unit-cost">₨ 0.00</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-[10px] font-mono text-slate-400 block">Suggested Retail (3.5x)</span>
+                                    <span class="text-sm font-bold text-lemon-300 font-mono" id="res-suggested-retail">₨ 0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 9: Pre-Shipment Quality Assurance (QA) Checklist -->
+        <section class="space-y-6 pt-4">
+            <div class="flex items-center justify-between border-b border-lemon-400/30 pb-3">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-xl bg-lemon-400 text-black flex items-center justify-center font-mono font-black text-sm shadow-md shadow-lemon-400/20">09</span>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-black text-white">Pre-Shipment Quality Assurance (QA) Checklist</h3>
+                        <p class="text-xs font-mono text-lemon-400 uppercase">Interactive Pre-Dispatch Protocol (Check Every Box Before Dispatch)</p>
+                    </div>
+                </div>
+                <button onclick="resetQAChecks()" class="text-xs font-mono text-slate-400 hover:text-white px-2.5 py-1 bg-white/5 rounded border border-white/10">Reset Checks</button>
+            </div>
+
+            <div class="bg-brandDark-850 p-6 rounded-2xl border border-white/10 shadow-sm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs font-medium text-slate-300">
+                    <label class="flex items-start space-x-3 p-3.5 bg-black/40 rounded-xl border border-white/5 hover:border-lemon-400/40 transition cursor-pointer">
+                        <input type="checkbox" class="mt-0.5 rounded text-lemon-400 focus:ring-0 h-4 w-4 bg-black/60 border-white/20">
+                        <span><strong>Crimp Outer Diameter:</strong> Digital vernier caliper measures between 14.85 mm and 15.05 mm around the ferrule with zero wrinkled lips.</span>
+                    </label>
+
+                    <label class="flex items-start space-x-3 p-3.5 bg-black/40 rounded-xl border border-white/5 hover:border-cyberCyan-400/40 transition cursor-pointer">
+                        <input type="checkbox" class="mt-0.5 rounded text-cyberCyan-400 focus:ring-0 h-4 w-4 bg-black/60 border-white/20">
+                        <span><strong>45° Dip Tube Cut:</strong> Tube tip is beveled at 45 degrees, sits flush against the bottom rear corner, and does not buckle or kink.</span>
+                    </label>
+
+                    <label class="flex items-start space-x-3 p-3.5 bg-black/40 rounded-xl border border-white/5 hover:border-shockPurple-400/40 transition cursor-pointer">
+                        <input type="checkbox" class="mt-0.5 rounded text-shockPurple-400 focus:ring-0 h-4 w-4 bg-black/60 border-white/20">
+                        <span><strong>Chill Clarity Check:</strong> Solution rested at 0°C–4°C for 48 hours and vacuum filtered through Whatman 11µm; zero floating flakes visible against light.</span>
+                    </label>
+
+                    <label class="flex items-start space-x-3 p-3.5 bg-black/40 rounded-xl border border-white/5 hover:border-shockPink-400/40 transition cursor-pointer">
+                        <input type="checkbox" class="mt-0.5 rounded text-shockPink-400 focus:ring-0 h-4 w-4 bg-black/60 border-white/20">
+                        <span><strong>Inversion Leak Test:</strong> 3 random bottles left upside down on white paper for 24 hours in a warm room; zero wet rings detected.</span>
+                    </label>
+
+                    <label class="flex items-start space-x-3 p-3.5 bg-black/40 rounded-xl border border-white/5 hover:border-neonOrange-400/40 transition cursor-pointer">
+                        <input type="checkbox" class="mt-0.5 rounded text-neonOrange-400 focus:ring-0 h-4 w-4 bg-black/60 border-white/20">
+                        <span><strong>EVA Foam Snugness:</strong> Bottle sits deeply inside high-density black EVA cavity; cannot rattle or contact outer box walls during courier transit.</span>
+                    </label>
+
+                    <label class="flex items-start space-x-3 p-3.5 bg-black/40 rounded-xl border border-white/5 hover:border-lemon-400/40 transition cursor-pointer">
+                        <input type="checkbox" class="mt-0.5 rounded text-lemon-400 focus:ring-0 h-4 w-4 bg-black/60 border-white/20">
+                        <span><strong>Retain Sample Archived:</strong> 20ml amber glass bottle sealed with paraffin wax and cataloged in the batch archive library.</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-white/10 pt-8 pb-16 text-center space-y-3">
+            <div class="flex items-center justify-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-lemon-400"></span>
+                <span class="w-2 h-2 rounded-full bg-cyberCyan-400"></span>
+                <span class="w-2 h-2 rounded-full bg-shockPurple-400"></span>
+                <span class="w-2 h-2 rounded-full bg-shockPink-500"></span>
+                <span class="w-2 h-2 rounded-full bg-neonOrange-500"></span>
+            </div>
+            <p class="text-xs font-mono uppercase tracking-widest text-slate-400">
+                Fragrance House Atelier Codex • Karachi, Pakistan
+            </p>
+            <p class="text-xs text-slate-500 max-w-xl mx-auto">
+                Engineered for serious indie perfume brand operators. Keep this document confidential. Maintain strict mechanical, financial, and gravimetric control at all times.
+            </p>
+        </footer>
+
+    </main>
+
+    <script>
+        function runLiveBatch() {
+            // Inputs
+            const concentration = parseFloat(document.getElementById('calc-concentration').value) || 0.20;
+            const bottleVol = parseFloat(document.getElementById('calc-bottle-vol').value) || 50;
+            const units = parseInt(document.getElementById('calc-units').value) || 100;
+
+            const oilRatePerKg = parseFloat(document.getElementById('calc-oil-rate').value) || 26000;
+            const alcRatePerL = parseFloat(document.getElementById('calc-alc-rate').value) || 550;
+            const bottleUnitRate = parseFloat(document.getElementById('calc-bottle-rate').value) || 150;
+            const boxUnitRate = parseFloat(document.getElementById('calc-box-rate').value) || 160;
+
+            const hasGlucam = document.getElementById('calc-include-glucam').checked;
+            const hasBht = document.getElementById('calc-include-bht').checked;
+
+            // Densities: Fragrance oil ~0.98 g/ml, ENA 96% ~0.81 g/ml
+            const oilDensity = 0.98;
+            const alcDensity = 0.81;
+
+            // Volumes per bottle
+            const oilVol = bottleVol * concentration;
+            const glucamVol = hasGlucam ? (bottleVol * 0.0075) : 0;
+            const alcVol = bottleVol - oilVol - glucamVol;
+
+            // Masses per bottle in grams
+            const oilMass = oilVol * oilDensity;
+            const alcMass = alcVol * alcDensity;
+            const glucamMass = glucamVol * 1.05;
+            const bhtMass = hasBht ? (bottleVol * 0.0005) : 0;
+
+            // Total batch masses in grams
+            const totalOilGrams = oilMass * units;
+            const totalAlcGrams = alcMass * units;
+            const totalGlucamGrams = glucamMass * units;
+            const totalBhtGrams = bhtMass * units;
+
+            const totalBatchGrams = totalOilGrams + totalAlcGrams + totalGlucamGrams + totalBhtGrams;
+            const totalBatchKg = (totalBatchGrams / 1000).toFixed(2);
+
+            // Cost calculation per bottle in PKR
+            // Oil cost: (oilMass / 1000) * oilRatePerKg
+            const oilCostPerBottle = (oilMass / 1000) * oilRatePerKg;
+            // Alcohol cost: (alcVol / 1000) * alcRatePerL
+            const alcCostPerBottle = (alcVol / 1000) * alcRatePerL;
+            // Additives cost approx ₨ 8 per bottle
+            const additivesCostPerBottle = (hasGlucam ? 6 : 0) + (hasBht ? 2 : 0);
+
+            const juiceCostPerBottle = oilCostPerBottle + alcCostPerBottle + additivesCostPerBottle;
+            const packagingCostPerBottle = bottleUnitRate + boxUnitRate;
+            const totalUnitCost = juiceCostPerBottle + packagingCostPerBottle;
+            const suggestedRetail = Math.round((totalUnitCost * 3.5) / 50) * 50; // Rounded to nearest 50 PKR
+
+            // Update DOM
+            document.getElementById('batch-badge').innerText = `${units} x ${bottleVol}ml`;
+            document.getElementById('batch-total-mass').innerText = `Total Batch Mass: ${totalBatchKg} kg (${Math.round(totalBatchGrams)} g)`;
+            document.getElementById('res-oil-mass').innerText = `${totalOilGrams.toFixed(1)} g (${(totalOilGrams / 1000).toFixed(2)} kg)`;
+            document.getElementById('res-alc-mass').innerText = `${totalAlcGrams.toFixed(1)} g (${(totalAlcGrams / 1000).toFixed(2)} kg)`;
+            document.getElementById('res-additives-mass').innerText = `${(totalGlucamGrams + totalBhtGrams).toFixed(1)} g (Glucam + BHT)`;
+
+            document.getElementById('res-juice-cost').innerText = `₨ ${juiceCostPerBottle.toFixed(1)}`;
+            document.getElementById('res-pack-cost').innerText = `₨ ${packagingCostPerBottle.toFixed(1)}`;
+            document.getElementById('res-total-unit-cost').innerText = `₨ ${totalUnitCost.toFixed(0)} PKR`;
+            document.getElementById('res-suggested-retail').innerText = `₨ ${suggestedRetail.toLocaleString()} PKR`;
+        }
+
+        function resetQAChecks() {
+            document.querySelectorAll('#module-calculator ~ section input[type="checkbox"]').forEach(cb => cb.checked = false);
+        }
+
+        window.onload = function() {
+            runLiveBatch();
+        };
+    </script>
+</body>
+</html>
